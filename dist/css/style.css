@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 25px;
+    cursor: pointer;
+    margin: 30px 0;
+    display: none;
+}
+
+.menu-icon{
+    margin: 30px 0;
+    width: 30px;
+    cursor: pointer;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+nav ul li a:hover{
+    cursor: pointer;
+    color: #009933;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.col-1{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+
+.col-1 h2{
+    font-size: 40px;
+}
+
+.col-1 p{
+    font-size: 16px;
+    font-weight: 100;
+    color: #b7b7b7;
+}
+
+.col-1 h4{
+    margin: 15px 0;
+}
+
+.col-1 h5{
+    font-size:10px;
+    color:red;
+}
+
+.col-1::after{
+    content: '';
+    width: 10px;
+    height: 55%;
+    background: linear-gradient(#39e600, #40ff00);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+button{
+    width: 140px;
+    border: 0;
+    margin-top: 5px;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(#39e600, #009933);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #000;
+}
+
+.col-2{
+    position:relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.col-2 .product{
+    width: 40%;
+    padding-left: 100px;
+}
+
+.col-2 .desc-text .check{
+    width: 3%;
+}
+
+.color-box{
+    position:absolute;
+    right:0;
+    top:0;
+    background: linear-gradient(#9fff80, #40ff00);
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 70%;
+    z-index: -1;
+    transition: translateX(150px);
+}
+
+.desc-text{
+    align-items: center;
+    padding-left: 50px;
+}
+
+.desc-text p{
+    font-weight: 400px;
+    margin: 0 0 15px;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    color: #000;
+    text-align: center;
+}
+
+.footer p{
+    font-size: 12px;
+    margin: 5px 0 5px;
+}
+
+.footer p .created-by{
+    cursor: pointer;
+    color: red;
+}
+
+@media (max-width:810px){
+    .color-box{
+        transform: translateX(60px);
+    }
+
+    .col-2 .product{
+        width: 150%;
+        padding-left: 100px;
+    }
+
+    .col-2 .desc-text .check{
+        width: 8%;
+    }
+
+    .desc-text p{
+        font-size: 12px;
+        font-weight: 400px;
+        margin: 0 0 15px;
+    }
+}
+
+@media only screen and (max-width:600px){
+
+    nav ul{
+        width: 100%;
+        background: linear-gradient(#9fff80, #40ff00);
+        top: 75px;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a{
+        color: #000;
+    }
+
+    .logo{
+        display: block;
+    }
+
+    #menulist{
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .row{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+
+    .col-1{
+        flex-basis: 100%;
+    }
+
+    .col-1 h2{
+        font-size: 30px;
+    }
+
+    .col-1 p{
+        font-size: 12px;
+    }
+
+    .col-1 h4{
+        font-size: 15px;
+    }
+
+    .col-2{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+
+    .col-2 .desc-text .check{
+        width: 10%;
+    }
+
+    .col-2 .product{
+        width: 100px;
+    }
+
+    .color-box{
+        transform: translateX(75px);
+    }
+
+    .desc-text{
+        align-items: left;
+        padding-left: 0px;
+    }
+    .desc-text p{
+        font-size: 12px;
+        margin: 0 0 10px;
+    }
+}

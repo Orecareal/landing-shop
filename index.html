@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Index Shop</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./dist/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="./dist/img/logo.png" class="menu-icon" />
+        <nav>
+          <ul id="menulist">
+            <li><a href="#index">Beranda</a></li>
+            <!-- <li><a>Info</a></li> -->
+          </ul>
+        </nav>
+        <img src="./dist/img/menu.png" class="logo" onclick="togglemenu()" />
+      </div>
+
+      <section id="index">
+        <div class="row">
+          <div class="col-1">
+            <h2>Dish Soap</h2>
+            <p>Sabun cuci piring rumahan</p>
+            <h4>Rp. 5.000 Isi 600 ml</h4>
+            <h5>*Baru tersedia di daerah Pekanbaru, Riau</h5>
+            <button type="button" onclick="location.href='https://api.whatsapp.com/send?phone=6285271203871'"><img src="./dist/img/whatsapp.png" width="10%"> Pesan Sekarang</button>
+          </div>
+          <div class="col-2">
+            <img src="./dist/img/product.png" class="product" />
+            <div class="color-box"></div>
+            <div class="desc-text">
+              <p>Produk sabun cuci piring rumahan yang memiliki keunggulan sebagai berikut.</p>
+              <p>
+                <svg
+                  class="check"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.746.254C5.265.254 0 5.519 0 12c0 6.481 5.265 11.746 11.746 11.746 6.482 0 11.746-5.265 11.746-11.746 0-1.44-.26-2.82-.734-4.097l-.264-.709-1.118 1.118.1.288c.373 1.064.575 2.207.575 3.4a10.297 10.297 0 01-10.305 10.305A10.297 10.297 0 011.441 12 10.297 10.297 0 0111.746 1.695c1.817 0 3.52.47 5.002 1.293l.32.178 1.054-1.053-.553-.316A11.699 11.699 0 0011.746.254zM22.97.841l-13.92 13.92-3.722-3.721-1.031 1.03 4.752 4.753L24 1.872z"
+                  />
+                </svg>
+                Menghilangkan noda makanan pada piring
+              </p>
+              <p>
+                <svg
+                  class="check"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.746.254C5.265.254 0 5.519 0 12c0 6.481 5.265 11.746 11.746 11.746 6.482 0 11.746-5.265 11.746-11.746 0-1.44-.26-2.82-.734-4.097l-.264-.709-1.118 1.118.1.288c.373 1.064.575 2.207.575 3.4a10.297 10.297 0 01-10.305 10.305A10.297 10.297 0 011.441 12 10.297 10.297 0 0111.746 1.695c1.817 0 3.52.47 5.002 1.293l.32.178 1.054-1.053-.553-.316A11.699 11.699 0 0011.746.254zM22.97.841l-13.92 13.92-3.722-3.721-1.031 1.03 4.752 4.753L24 1.872z"
+                  />
+                </svg>
+                Tidak lengket di tangan saat digunakan
+              </p>
+              <p>
+                <svg
+                  class="check"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.746.254C5.265.254 0 5.519 0 12c0 6.481 5.265 11.746 11.746 11.746 6.482 0 11.746-5.265 11.746-11.746 0-1.44-.26-2.82-.734-4.097l-.264-.709-1.118 1.118.1.288c.373 1.064.575 2.207.575 3.4a10.297 10.297 0 01-10.305 10.305A10.297 10.297 0 011.441 12 10.297 10.297 0 0111.746 1.695c1.817 0 3.52.47 5.002 1.293l.32.178 1.054-1.053-.553-.316A11.699 11.699 0 0011.746.254zM22.97.841l-13.92 13.92-3.722-3.721-1.031 1.03 4.752 4.753L24 1.872z"
+                  />
+                </svg>
+                Tidak berbau dan aman untuk piring
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">
+        <p>© 2023 created by <a class="created-by">Gitsn</a></p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      const menulist = document.getElementById("menulist");
+      menulist.style.maxHeight = "0px";
+      function togglemenu() {
+        if (menulist.style.maxHeight == "0px") {
+          menulist.style.maxHeight = "130px";
+        } else {
+          menulist.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>
